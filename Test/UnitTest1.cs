@@ -19,7 +19,7 @@ namespace Test
             Assert.True(invalid);
 
         }
-
+        [Fact]
         public void testValid()
         {
             var validTri = triangle.notValid(24, 18, 30);
