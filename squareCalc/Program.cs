@@ -17,7 +17,7 @@ namespace squareCalc
             {
                 Console.WriteLine($"The area of your triangle is {triangle.calcArea(num1, num2, num3)}");
             }
-            
+            Console.ReadKey();
         }
     }
 
