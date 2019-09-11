@@ -31,4 +31,13 @@ namespace squareCalc
             }
         }
     }
+
+    public class triangle {
+
+        public static double calcArea(double length1,double length2, double length3)
+        {
+            return 0;
+        }
+    }
+
 }
