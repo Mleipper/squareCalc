@@ -9,6 +9,14 @@ namespace squareCalc
             var num1=helper.getNumber("first");
             var num2=helper.getNumber("Second");
             var num3 = helper.getNumber("Third");
+            if (triangle.notValid(num1, num2, num3))
+            {
+                Console.WriteLine("Invalid Triangle");
+            }
+            else
+            {
+                Console.WriteLine($"The area of your triangle is {triangle.calcArea(num1, num2, num3)}");
+            }
             
         }
     }
@@ -33,10 +41,15 @@ namespace squareCalc
     }
 
     public class triangle {
-
+        public static bool notValid(double a, double b, double c)
+        {
+            return a + b <= c || a + c <= b || c + b <= a;
+        }
         public static double calcArea(double length1,double length2, double length3)
         {
-            return 0;
+            var p = (length1 + length2 + length3) / 2;
+            var area = Math.Sqrt((p * (p - length1) * (p - length2) * (p - length3)));
+            return area;
         }
     }
 
